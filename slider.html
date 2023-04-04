@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .left,
+      .right {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: brown;
+      }
+
+      .anh {
+        height: 200px;
+        width: 50%;
+      }
+      .anh img {
+        width: 100%;
+        height: 100%;
+        animation-name: fade;
+        animation-duration: 2.5s;
+      }
+      /* Fading animation */
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      img {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left"></div>
+    <div class="anh">
+      <img class="anh1" src="./anh.jpg" alt="" />
+      <img
+        class="anh2"
+        src="https://tse2.mm.bing.net/th?id=OIP.1nM8bHai-fZA8j9jwgG4bwHaKP&pid=Api&P=0"
+        alt=""
+      />
+    </div>
+    <div class="right"></div>
+  </body>
+  <script>
+    /animation hieu ug xhien con transition hieu ung khi tac dong/;
+    const imgs = [
+      "http://nhanam.com.vn/combo-sach-16928/bo-cuon-sach-dau-doi-tuyet-dep",
+      "http://nhanam.com.vn/combo-sach-14718/bo-cam-nang-thien-tai-tre",
+      "http://nhanam.com.vn/combo-sach-14716/bo-ehon-nong-am-cua-yoko-imoto",
+    ];
+    const b = document.querySelector(".left");
+    const c = document.querySelector(".right");
+    let temp = -1;
+    const d = document.querySelectorAll("img");
+    console.log(d);
+    c.addEventListener("click", (e) => {
+      if (temp < 1) {
+        ++temp;
+      } else temp = 0;
+      console.log(temp);
+      // if (temp >= 1) {
+      //   d[temp - 1].style.display = "none";
+      // }
+      // d[temp].style.display = "block";
+      // while(temp>=1)
+      // {
+      //   for(int i=0,i<temp,i++)
+      //   {
+      //     if(bien>=1)
+      //     d[bien].style.display = "none";
+      //   }
+      //tu duy client gui data server se ktra data 1 luot xem cai nao se dc tich
+      //cai nao ko roi gui lai client
+      for (const bien in d) {
+        if (bien != temp) {
+          d[bien].style.display = "none";
+        } else {
+          d[bien].style.display = "block";
+        }
+      }
+    });
+  </script>
+</html>

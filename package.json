@@ -1,0 +1,39 @@
+{
+  "name": "newproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "phuc",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "create-react-app": "^5.0.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^6.7.0",
+    "formidable": "^2.1.1",
+    "hah": "^1.0.53",
+    "helmet": "^6.0.1",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "sequelize": "^6.29.3",
+    "slugify": "^1.6.5",
+    "validator": "^13.9.0",
+    "xss-clean": "^0.1.1"
+  }
+}
