@@ -17,8 +17,8 @@
                 <div class="card">
                     <% mascots.forEach(function(mascot,index) { %>
                         <div class="card__picture">
-                            <a href="/page?id=<%= index+1+gain %>">
-          <img src="img/book/book<%= index+1+gain%>.jpg" alt="" />
+                            <a href="/page?id=<%= mascot.id %>">
+          <img src="img/book/book<%= mascot.id%>.jpg" alt="" />
         </a>
 
                             <div class="detail">
